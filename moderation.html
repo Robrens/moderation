@@ -1,35 +1,41 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
-  <meta charset="UTF-8">
-  <title>My HTML Page</title>
-  <!-- <link rel="stylesheet" type="text/css" title="Cool stylesheet" href="style.css"> -->
+    <meta charset="UTF-8">
+    <title>My HTML Page</title>
+    <!-- <link rel="stylesheet" type="text/css" title="Cool stylesheet" href="style.css"> -->
 </head>
+
 <body>
     <div class="lol">
         <textarea name="name" rows="8" cols="80" id="area"></textarea>
         <input type="button" name="btn" id="btn" value="Modérer">
     </div>
-    
+
     <section id="azerty">
-      <h1>Résultat</h1>
-      <p id="censure" style="background-color: grey"></p>
+        <h1>Résultat</h1>
+        <p id="censure" style="background-color: grey"></p>
     </section>
 
-<script type="text/javascript">
+    <script type="text/javascript">
+        var btn = document.getElementById('btn');
+        var par = document.getElementById('censure');
+        var text = document.getElementById('area');
+        var result
 
-var btn = document.getElementById('btn');
-var par = document.getElementById('censure');
-var text = document.getElementById('area');
+        btn.addEventListener('click', moderat);
 
-
-btn.addEventListener('click', moderat);
-
-  function moderat(){
-    test = text.value;
-    par.innerText = test;
-}
-
-</script>
+        function moderat() {
+            test.replace(":)", "--");
+            var test = text.value;
+            // result = test;
+            console.log(test);
+            par.innerText = test;
+            var quoi = par.innerText;
+            // result = test;
+        }
+    </script>
 </body>
+
 </html>
