@@ -7,12 +7,31 @@
 </head>
 <body>
     <div class="lol">
-        <textarea name="name" rows="8" cols="80"></textarea>
+        <textarea name="name" rows="8" cols="80" id="area"></textarea>
         <input type="button" name="btn" id="btn" value="Modérer">
     </div>
+    <section id="azerty">
+<h1>Résultat</h1>
+<p id="censure" style="background-color: grey">
+
+</p>
+    </section>
 
   <script type="text/javascript">
 
+var btn = document.getElementById('btn');
+var text = document.getElementById('area');
+var par = document.getElementById('censure');
+
+btn.addEventListener('click', moderat);
+
+function moderat(){
+
+
+var test = text.innerText;
+
+console.log(test);
+};
 
 
   </script>
